@@ -7,17 +7,23 @@ package pwo.seq;
 import java.math.BigDecimal;
 
 /**
- *
+ * Implementacja ciągu Fibonacciego
  * @author kuba
  */
 public class FibonacciGenerator extends Generator {
 
+    /**
+     * Konstruktor klasy 
+     */
     public FibonacciGenerator() {
         current = new BigDecimal(0);
         f_1 = new BigDecimal(1);
         f_2 = new BigDecimal(0);
     }
 
+    /**
+     * metoda resetująca ciąg
+     */
     @Override
     public void reset() {
         super.reset();
@@ -26,6 +32,10 @@ public class FibonacciGenerator extends Generator {
         f_2 = new BigDecimal(0);
     }
 
+    /**
+     *
+     * @return zwracaca kolejny wyraz ciągu Fibonnaciego
+     */
     @Override
     public BigDecimal nextTerm() {
 

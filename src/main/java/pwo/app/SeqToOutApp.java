@@ -11,6 +11,12 @@ import pwo.utils.SequenceTools;
  * @author student
  */
 public class SeqToOutApp extends SeqToFileApp {
+
+    /**
+     *
+     * @param args tablica argumentów typu String
+     * @return typ ciągu
+     */
     @Override
  protected boolean getArgs(String[] args) {
      
@@ -19,7 +25,11 @@ public class SeqToOutApp extends SeqToFileApp {
      return seqType != null && from >= 0 && to >= 0;
  }
 
- @Override
+    /**
+     *
+     * @return prawde jeśli pomyślnie zapisano ciąg do pliku
+     */
+    @Override
  protected boolean wirteSeq() {
      
      System.out.println(SequenceTools.getTermsAsColumn(seqType.getGenerator(), from, to));
@@ -27,7 +37,11 @@ public class SeqToOutApp extends SeqToFileApp {
      return true;
  }
 
- @Override
+    /**
+     *
+     * @param args argumenty w postaci tablicy ciągu
+     */
+    @Override
  public void run(String[] args) {
      System.out.println("Sequence to terminal CLI app");
 

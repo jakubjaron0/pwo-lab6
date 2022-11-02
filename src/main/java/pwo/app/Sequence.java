@@ -5,11 +5,15 @@
 package pwo.app;
 
 /**
- *
+ * klasa główna programu
  * @author kuba
  */
 public class Sequence {
 
+    /**
+     *
+     * @param args lista argumentów 
+     */
     public static void main(String[] args) {
 
         switch(args.length){

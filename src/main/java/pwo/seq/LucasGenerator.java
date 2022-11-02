@@ -7,16 +7,22 @@ package pwo.seq;
 import java.math.BigDecimal;
 
 /**
- *
+ * Klasa implementująca generator liczb ciągu Lucasa
  * @author kuba
  */
 public class LucasGenerator extends FibonacciGenerator {
 
+    /**
+     *
+     */
     public LucasGenerator() {
         current = new BigDecimal(2);
         f_2 = new BigDecimal(2);
     }
 
+    /**
+     * metoda resetująca ciąg
+     */
     @Override
     public void reset() {
         super.reset();
@@ -24,6 +30,10 @@ public class LucasGenerator extends FibonacciGenerator {
         f_2 = new BigDecimal(2);
     }
 
+    /**
+     *
+     * @return zwraca kolejny wyraz ciagu Lucasa
+     */
     @Override
     public BigDecimal nextTerm() {
         if (lastIndex == 0) {

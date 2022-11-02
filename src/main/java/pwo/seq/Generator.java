@@ -13,17 +13,44 @@ import pwo.utils.SequenceGenerator;
  */
 abstract public class Generator implements SequenceGenerator {
 
+    /**
+     *
+     */
     protected int lastIndex = 0;
-    protected BigDecimal current = null,
-            f_1 = null,
-            f_2 = null,
-            f_3 = null;
 
+    /**
+     *
+     */
+    protected BigDecimal current = null,
+
+    /**
+     *
+     */
+    f_1 = null,
+
+    /**
+     *
+     */
+    f_2 = null,
+
+    /**
+     *
+     */
+    f_3 = null;
+
+    /**
+     *
+     */
     @Override
     public void reset() {
         lastIndex = 0;
     }
 
+    /**
+     *
+     * @param i liczba wyrazów ciągu do wygenerowania
+     * @return
+     */
     @Override
     public final BigDecimal getTerm(int i) {
         if (i < 0) {

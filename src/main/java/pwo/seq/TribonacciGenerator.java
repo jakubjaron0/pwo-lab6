@@ -7,21 +7,31 @@ package pwo.seq;
 import java.math.BigDecimal;
 
 /**
- *
+ * Klasa implementująca ciąg Tribonacciego
  * @author kuba
  */
 public class TribonacciGenerator extends FibonacciGenerator {
 
+    /**
+     * Konstruktor klasy TribonacciGenerator
+     */
     public TribonacciGenerator() {
         f_3 = new BigDecimal(0);
     }
 
+    /**
+     *Metoda resetująca ciąg
+     */
     @Override
     public void reset() {
         super.reset();
         f_3 = new BigDecimal(0);
     }
 
+    /**
+     *
+     * @return zwraca kolejny wyraz ciągu Tribonacciego
+     */
     @Override
     public BigDecimal nextTerm() {
         if (lastIndex > 2) {
